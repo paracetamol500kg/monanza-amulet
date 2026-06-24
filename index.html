@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โมนันซ่าพระเครื่อง - รับเช่า ให้เช่า และรับเลี่ยมกรอบพระ</title>
-    <!-- นำเข้า Tailwind CSS สำหรับการจัดตกแต่งที่รวดเร็วและรองรับมือถือ -->
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome สำหรับไอคอนต่างๆ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Font ภาษาไทย -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -21,81 +21,69 @@
         }
         .gold-text {
             color: #d4af37;
+		}
+        .red-text {
+            color: #FF7F7F;
         }
         .gold-bg {
             background-color: #d4af37;
         }
     </style>
 </head>
-<body>
+<body class="bg-zinc-900 text-gray-200 min-h-screen pb-24">
 
-    <!-- แถบเมนูด้านบน (Navigation Bar) -->
     <nav class="bg-black border-b border-yellow-600/30 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-2.5 flex justify-between items-center">
-            
             <a href="#" class="flex items-center gap-3 font-bold gold-text">
-                <!-- โลโก้บนเมนูบาร์ -->
                 <img src="images/logo.png" alt="โลโก้ โมนันซ่าพระเครื่อง" class="h-10 w-auto object-contain rounded">
                 <span class="text-xl tracking-wide hidden sm:inline">โมนันซ่าพระเครื่อง</span>
             </a>
-
             <div class="hidden md:flex space-x-6">
                 <a href="#services" class="hover:text-yellow-500 transition">บริการของเรา</a>
                 <a href="#gallery" class="hover:text-yellow-500 transition">พระเครื่องแนะนำ</a>
+                <a href="#location" class="hover:text-yellow-500 transition">เวลาทำการ</a>
                 <a href="#contact" class="hover:text-yellow-500 transition">ติดต่อเรา</a>
             </div>
-            
             <a href="tel:0938253063" class="gold-bg text-black px-4 py-1.5 rounded-full text-sm font-semibold hover:bg-yellow-500 transition flex items-center gap-1.5">
                 <i class="fa-solid fa-phone"></i> โทรด่วน
             </a>
         </div>
     </nav>
 
-    <!-- ส่วนหัวเว็บไซต์ (Hero Section) พร้อมรูปภาพเด่นก่อนเข้าสู่เนื้อหา -->
-    <header class="relative bg-zinc-950 pt-0 pb-12 md:pb-16 text-center px-0 border-b border-zinc-900">
-    
-    <div class="w-full mb-8 border-b border-yellow-600/30 shadow-2xl">
-    <img src="images/banner.jpg" alt="ป้ายหน้าร้านหรือรูปภาพพระเครื่องหลัก" class="w-full h-auto block">
-</div>
-			<!-- ข้อความต้อนรับและบริการ -->
-		<div class="max-w-3xl mx-auto px-4">
+    <header class="relative bg-zinc-950 text-center border-b border-zinc-900">
+        <div class="w-full mb-8 border-b border-yellow-600/30 shadow-2xl">
+            <img src="images/banner.jpg" alt="ป้ายหน้าร้านหรือรูปภาพพระเครื่องหลัก" class="w-full h-auto block">
+        </div>
+        <div class="max-w-3xl mx-auto px-4 pb-12">
             <h1 class="text-3xl md:text-5xl font-bold gold-text mb-4">รับเช่า - ให้เช่าพระเครื่อง และบริการเลี่ยมกรอบพระด้วยเครื่องเลเซอร์</h1>
             <p class="text-gray-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">ยินดีต้อนรับสู่ศูนย์พระเครื่องมาตรฐาน บริการรับเช่าพระในราคาที่เหมาะสม ให้เช่าพระแท้ตามหลักสากล และบริการเลี่ยมกรอบพระทุกชนิด</p>
-            
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.facebook.com/ka.phl.sri.ya/" class="gold-bg text-black font-bold px-8 py-3 rounded-md hover:bg-yellow-500 transition shadow-lg text-sm md:text-base">ส่งรูปพระประเมินราคา</a>
+                <a href="#contact" class="gold-bg text-black font-bold px-8 py-3 rounded-md hover:bg-yellow-500 transition shadow-lg text-sm md:text-base">ส่งรูปพระประเมินราคา</a>
                 <a href="#services" class="border border-yellow-600 gold-text font-bold px-8 py-3 rounded-md hover:bg-yellow-600/20 transition text-sm md:text-base">ดูบริการทั้งหมด</a>
             </div>
         </div>
     </header>
 
-    <!-- ส่วนบริการ (Services Section) -->
     <section id="services" class="max-w-6xl mx-auto px-4 py-16">
         <h2 class="text-2xl md:text-3xl font-bold text-center gold-text mb-12 flex items-center justify-center gap-3">
             <span class="h-px w-12 bg-yellow-600"></span> บริการของเรา <span class="h-px w-12 bg-yellow-600"></span>
         </h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- บริการที่ 1 -->
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md hover:border-yellow-600/50 transition">
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md">
                 <div class="w-16 h-16 mx-auto mb-4 bg-yellow-600/10 text-yellow-500 rounded-full flex items-center justify-center text-2xl">
                     <i class="fa-solid fa-hand-holding-hand"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2 gold-text">รับเช่าพระเครื่อง</h3>
                 <p class="text-gray-400 text-sm">รับเช่าพระเครื่อง พระบูชา เหรียญคณาจารย์ยอดนิยม ให้ราคาสูง จ่ายสดทันที ทั่วประเทศ ส่งรูปมาประเมินก่อนได้</p>
             </div>
-
-            <!-- บริการที่ 2 -->
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md hover:border-yellow-600/50 transition">
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md">
                 <div class="w-16 h-16 mx-auto mb-4 bg-yellow-600/10 text-yellow-500 rounded-full flex items-center justify-center text-2xl">
                     <i class="fa-solid fa-gem"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2 gold-text">ให้เช่า/จัดหาพระแท้</h3>
                 <p class="text-gray-400 text-sm">บริการให้เช่าพระเครื่องวัตถุมงคลที่ผ่านการตรวจสอบ รับประกันพระแท้ตามหลักสากลนิยม ตลอดชีพ</p>
             </div>
-
-            <!-- บริการที่ 3 -->
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md hover:border-yellow-600/50 transition">
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-center shadow-md">
                 <div class="w-16 h-16 mx-auto mb-4 bg-yellow-600/10 text-yellow-500 rounded-full flex items-center justify-center text-2xl">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
@@ -105,7 +93,6 @@
         </div>
     </section>
 
-    <!-- ส่วนตัวอย่างพระเครื่อง (Gallery Section) -->
     <section id="gallery" class="bg-zinc-950 py-16">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center gold-text mb-12 flex items-center justify-center gap-3">
@@ -145,54 +132,151 @@
         </div>
     </section>
 
-    <!-- ส่วนช่องทางการติดต่อ -->
-    <section id="contact" class="max-w-4xl mx-auto px-4 py-16">
+    <section id="location" class="max-w-6xl mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col justify-between shadow-xl">
+                <div>
+                    <h2 class="text-2xl font-bold gold-text mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-store"></i> หน้าร้าน / เวลาทำการ
+                    </h2>
+                    <p class="text-gray-400 text-sm mb-6">แวะมาชมพระเครื่ององค์จริง หรือนำพระมาให้ประเมินราคาที่ร้านได้ครับ</p>
+                    
+                    <div id="shop-status-box"></div>
+
+                    <div class="space-y-3 text-sm">
+                        <div class="flex justify-between border-b border-zinc-800 pb-2">
+                            <span class="text-gray-300">วันจันทร์ - วันเสาร์</span>
+                            <span class="gold-text font-semibold">09:00 - 17:00 น.</span>
+                        </div>
+						<div class="flex justify-between border-b border-zinc-800 pb-2">
+                            <span class="text-gray-300"></span>
+                            <span class="red-text font-semibold">หยุดทุกวันอาทิตย์</span>
+                            <span class="gold-text font-semibold"></span>
+                        </div>
+                        <div class="flex justify-between pb-2">
+                            <span class="text-gray-400">ที่ตั้งร้าน:</span>
+                            <span class="text-gray-300 text-right">หลัง บขส. พัทลุง ติดกับฟินส์ รีสอร์ท</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 pt-4 border-t border-zinc-800">
+                    <p class="text-xs text-gray-500 flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info"></i> แนะนำให้โทรนัดหมายล่วงหน้าก่อนเดินทางมา เพื่อความสะดวกครับ
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-zinc-900 border border-zinc-800 p-4 rounded-xl shadow-xl flex flex-col h-[350px] md:h-auto">
+                <iframe 
+                    class="w-full h-full rounded-lg opacity-80 hover:opacity-100 transition duration-300"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.474776104886!2d100.537262!3d13.756331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ1JzIyLjgiTiAxMDDCsDMyJzE0LjEiRQ!5e0!3m2!1sth!2sth!4v1650000000000!5m2!1sth!2sth" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-4xl mx-auto px-4 py-16 mb-12">
         <div class="bg-zinc-900 border-2 border-yellow-600/40 rounded-xl p-8 shadow-2xl">
             <h2 class="text-2xl md:text-3xl font-bold text-center gold-text mb-2">ติดต่อเรา / ส่งรูปประเมินราคา</h2>
             <p class="text-gray-400 text-center text-sm mb-10">สะดวกช่องทางไหน คลิกติดต่อได้ทันที บริการเป็นกันเอง คุยง่าย จบไว</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 1. เบอร์โทรศัพท์ -->
                 <a href="tel:0938253063" class="flex flex-col items-center p-6 bg-zinc-950 rounded-lg border border-zinc-800 hover:border-yellow-500 transition text-center group">
-                    <div class="w-14 h-14 bg-amber-600/10 text-amber-500 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 bg-amber-600/10 text-amber-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-solid fa-phone-volume"></i>
                     </div>
                     <span class="block font-bold text-lg mb-1">โทรศัพท์</span>
                     <span class="text-gray-400 text-sm">093-825-3063</span>
-                    <span class="mt-3 text-xs text-amber-500 underline">โทรเลย !!</span>
                 </a>
-
-                <!-- 2. LINE -->
                 <a href="https://line.me/R/ti/p/@yourline" target="_blank" class="flex flex-col items-center p-6 bg-zinc-950 rounded-lg border border-zinc-800 hover:border-green-500 transition text-center group">
-                    <div class="w-14 h-14 bg-green-600/10 text-green-500 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 bg-green-600/10 text-green-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-brands fa-line"></i>
                     </div>
                     <span class="block font-bold text-lg mb-1">Line Official</span>
                     <span class="text-gray-400 text-sm">kamung888</span>
-                    <span class="mt-3 text-xs text-green-500 underline">คลิกเพื่อแอดไลน์</span>
                 </a>
-
-                <!-- 3. Facebook -->
                 <a href="https://www.facebook.com/ka.phl.sri.ya/" target="_blank" class="flex flex-col items-center p-6 bg-zinc-950 rounded-lg border border-zinc-800 hover:border-blue-500 transition text-center group">
-                    <div class="w-14 h-14 bg-blue-600/10 text-blue-500 rounded-full flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition">
+                    <div class="w-14 h-14 bg-blue-600/10 text-blue-500 rounded-full flex items-center justify-center text-2xl mb-4">
                         <i class="fa-brands fa-facebook"></i>
                     </div>
-                    <span class="block font-bold text-lg mb-1">Facebook</span>
+                    <span class="block font-bold text-lg mb-1">Facebook Fanpage</span>
                     <span class="text-gray-400 text-sm">กำพล ศรียา</span>
-                    <span class="mt-3 text-xs text-blue-500 underline">ติดต่อเรา</span>
                 </a>
-            </div>
-
-            <div class="mt-10 text-center text-xs text-gray-500">
-                <p><i class="fa-solid fa-circle-info"></i> ส่งรูปพระเครื่องทาง Line หรือ Facebook ชัดๆ หน้า-หลัง-ข้าง เพื่อความรวดเร็วในการประเมินราคาครับ</p>
             </div>
         </div>
     </section>
 
-    <!-- ส่วนท้ายเว็บ (Footer) -->
     <footer class="bg-black border-t border-zinc-900 py-6 text-center text-xs text-gray-500">
-        <p>© <?php echo date("Y"); ?> มงคลพระเครื่อง - รับเช่า ให้เช่า เลี่ยมกรอบพระ สงวนลิขสิทธิ์</p>
+        <p>© <span id="current-year"></span> โมนันซ่าพระเครื่อง - รับเช่า ให้เช่า เลี่ยมกรอบพระ สงวนลิขสิทธิ์</p>
     </footer>
+
+    <div style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background-color: #09090b; border-top: 1px solid rgba(212, 175, 55, 0.4); padding: 12px; display: flex; justify-content: space-around; align-items: center; box-shadow: 0 -5px 20px rgba(0,0,0,0.8);">
+        <a href="tel:0938253063" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 33.33%; text-align: center; color: #f59e0b; text-decoration: none;">
+            <i class="fa-solid fa-phone" style="font-size: 20px; margin-bottom: 4px;"></i>
+            <span style="font-size: 12px; font-weight: bold;">โทรด่วน</span>
+        </a>
+        <div style="height: 24px; width: 1px; background-color: #27272a;"></div>
+        <a href="https://line.me/R/ti/p/@yourline" target="_blank" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 33.33%; text-align: center; color: #22c55e; text-decoration: none;">
+            <i class="fa-brands fa-line" style="font-size: 24px; margin-bottom: 2px;"></i>
+            <span style="font-size: 12px; font-weight: bold;">คุยไลน์</span>
+        </a>
+        <div style="height: 24px; width: 1px; background-color: #27272a;"></div>
+        <a href="https://www.facebook.com/ka.phl.sri.ya/" target="_blank" style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 33.33%; text-align: center; color: #3b82f6; text-decoration: none;">
+            <i class="fa-brands fa-facebook" style="font-size: 20px; margin-bottom: 4px;"></i>
+            <span style="font-size: 12px; font-weight: bold;">เฟซบุ๊ก</span>
+        </a>
+    </div>
+
+    <script>
+        // 1. ตั้งค่าปีปัจจุบันตรงท้ายเว็บอัตโนมัติ
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 2. ฟังก์ชันตรวจสอบเวลา เปิด-ปิด ร้านแบบเรียลไทม์ (เพิ่มระบบปิดวันอาทิตย์)
+        function checkShopStatus() {
+            const now = new Date();
+            // ปรับเวลาให้เป็นของโซนไทย
+            const localTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Bangkok' }));
+            
+            const day = localTime.getDay(); // ดึงค่าวัน: 0 = วันอาทิตย์, 1 = วันจันทร์, ..., 6 = วันเสาร์
+            const hours = localTime.getHours();
+            const minutes = localTime.getMinutes();
+            const currentTimeValue = (hours * 100) + minutes; // เช่น 10:30 -> 1030
+
+            const openTime = 0900;  // ร้านเปิด 09:00 น.
+            const closeTime = 1700; // ร้านปิด 17:00 น.
+
+            const statusBox = document.getElementById('shop-status-box');
+
+            // 🟢 เช็กเงื่อนไข: ถ้าเป็นวันอาทิตย์ (day === 0) ให้ขึ้นว่าปิดร้านทันที โดยไม่ต้องเช็กเวลา
+            if (day === 0) {
+                statusBox.innerHTML = `
+                    <div class="inline-flex items-center gap-2 bg-red-500/10 text-red-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-red-500/30">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> วันนี้หน้าร้านปิดทำการ (ปิดทุกวันอาทิตย์)
+                    </div>
+                `;
+            } 
+            // 🟢 ถ้าไม่ใช่วันอาทิตย์ ให้เช็กเวลาเปิด-ปิดตามปกติ
+            else if (currentTimeValue >= openTime && currentTimeValue < closeTime) {
+                statusBox.innerHTML = `
+                    <div class="inline-flex items-center gap-2 bg-green-500/10 text-green-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-green-500/30">
+                        <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span> ตอนนี้หน้าร้านเปิดทำการอยู่
+                    </div>
+                `;
+            } else {
+                statusBox.innerHTML = `
+                    <div class="inline-flex items-center gap-2 bg-red-500/10 text-red-500 px-4 py-2 rounded-full text-sm font-bold mb-6 border border-red-500/30">
+                        <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span> ตอนนี้หน้าร้านปิดทำการ
+                    </div>
+                `;
+            }
+        }
+
+        // เรียกใช้งานฟังก์ชันทันทีที่โหลดหน้าเว็บ
+        checkShopStatus();
+    </script>
 
 </body>
 </html>
